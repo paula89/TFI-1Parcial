@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Receive\**" />
+    <EmbeddedResource Remove="Receive\**" />
+    <None Remove="Receive\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="RabbitMQ.Client" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DAL\AutogService.csproj" />
+    <ProjectReference Include="..\ReceivingApp\ReceivingApp.csproj" />
+  </ItemGroup>
+
+</Project>
